@@ -132,23 +132,50 @@ table {
 
 // WEBSITE STYLING
 :root {
-  --beige: #f2e8dc;
+  --beige: #F4EDDF;
   --white: #ffffff;
   --dark: rgba(30, 30, 30);
+  --semidark: rgb(45, 45, 45);
 }
 
 /*app*/
+
 .app {
   background-image: url("./assets/images/background2.jpg");
   background-size: contain;
   height: 100vh;
   font-family: "Poppins", sans-serif;
   color: rgb(27, 27, 27);
+
+  &__container{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+  }
+
+  &__navbar {
+    flex: 0 1 auto;
+  }
+
+  &__content{
+    flex: 1 1 auto;
+  }
+
+  &__footer{
+    flex: 0 1 40px;
+  }
+
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
 }
 
-.container {
+.content {
   padding: 50px 0 0 0;
-  margin: 10vh auto 0;
+  margin: 5vh auto 0;
+  height: 100%;
 
   background-color: var(--white);
   border-radius: 50px 50px 0 0;
@@ -162,27 +189,13 @@ table {
 .btn {
   margin: 15px auto;
   cursor: pointer;
+  border: var(--dark) 1px solid;
+  border-radius: 15px;
+  background-color: var(--beige);
 
-  &--send {
-    background-color: var(--beige);
-    border: none;
-    color: var(--white);
-
-    &:hover {
-      transform: scale(1.1);
-      transition: all 200ms ease-in-out;
-    }
-  }
-
-  &--back {
-    background-color: var(--beige);
-    border: none;
-    color: var(--white);
-
-    &:hover {
-      transform: scale(1.1);
-      transition: all 200ms ease-in-out;
-    }
+  &:active {
+    background-color: var(--semidark);
+    color: var(--white)
   }
 
   &--handwritten {
@@ -195,6 +208,8 @@ table {
   }
 
   &--medium {
+    width: 225px;
+    height: 50px;
     padding: 8px 25px;
     font-size: 1.1rem;
   }
@@ -207,12 +222,18 @@ table {
 
 /*fonts*/
 
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
 .page {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .text {
+  font-size: 16px;
   line-height: 25px;
   margin-bottom: 10px;
 }

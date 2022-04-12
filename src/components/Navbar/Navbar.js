@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar app__navbar">
         <div className="navbar__container">
           {/* Mobile navbar ONLY */}
           <div className="mobilemenu__navbar">

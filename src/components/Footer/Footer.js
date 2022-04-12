@@ -9,7 +9,7 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 
 function Footer() {
   return (
-    <footer className="footer__container">
+    <footer className="footer__container app__footer">
       <div className="footer__content">
 
         {/* <div className="footer__link__wrapper">
