@@ -18,7 +18,7 @@ function Landing() {
 
           <div className="content__inside">
             <p className="text">
-              Je m'appelle Pavlov. <br /> Je suis un chat très curieux, et
+              Je m'appelle <span className="bold">Pavlov</span>. <br /> Je suis un chat très curieux, et
               j'aime donc me promener et rencontrer de nouveaux humains. <br />
               Mais je ne suis pas perdu pour autant !
             </p>

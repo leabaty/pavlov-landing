@@ -1,20 +1,22 @@
 import React from "react";
 
-import "./Food.scss";
-
 function Food() {
   return (
     <>
       {" "}
       <div className="page app__content">
         <div className="content">
-          <h1 className="title title--medium">Bonjour !</h1>
+          <h1 className="title title--medium">Mon alimentation</h1>
 
           <div className="content__inside">
             <p className="text">
-              Je m'appelle Pavlov. <br /> Je suis un chat très curieux, et
-              j'aime donc me promener et rencontrer de nouveaux humains. <br />
-              Mais je ne suis pas perdu pour autant !
+              J'ai l'estomac capricieux, et je ne mange donc que des croquettes
+              vétérinaires...
+            </p>
+
+            <p className="text bold">
+              Merci de ne pas me donner d'autre nourriture, et surtout pas de
+              lait, qui me rend malade.
             </p>
           </div>
         </div>

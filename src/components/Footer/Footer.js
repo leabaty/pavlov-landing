@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import "./Footer.scss";
 
@@ -11,21 +10,6 @@ function Footer() {
   return (
     <footer className="footer__container app__footer">
       <div className="footer__content">
-
-        {/* <div className="footer__link__wrapper">
-          <h2 className="footer__title">About</h2>
-
-          <div className="footer__links">
-            <div className="footer__link__items">
-              <Link to="/legal-notice">Legal Notice</Link>
-
-              <Link to="/privacy-policy">
-                Privacy Policy
-              </Link>
-            </div>
-          </div>
-        </div> */}
-
         <div className="social__icons">
           <a
             className="social__icon-link"

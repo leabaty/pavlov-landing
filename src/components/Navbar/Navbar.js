@@ -6,8 +6,6 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 import "./Navbar.scss";
 
-import logo from "../../assets/images/logo/black-paw.svg";
-
 function Navbar() {
   const [openedMobileMenu, setOpenMobileMenu] = useState(false);
 
