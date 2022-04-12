@@ -26,6 +26,7 @@ function Human() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="15 faubourg des balmettes Annecy"
+                width="100%"
               ></iframe>
             </div>
 
@@ -34,13 +35,13 @@ function Human() {
             </p>
 
             {mobileNumber ? (
-              <div>
-                <button
+              <div className="btn--call">
+                <a
                   href="tel:0033695100269"
                   className="btn btn--medium btn--call"
                 >
                   <BsTelephoneOutbound className="btn__icon" /> 06 95 10 02 69
-                </button>
+                </a>
               </div>
             ) : (
               <div>

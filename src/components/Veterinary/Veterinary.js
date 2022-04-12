@@ -14,14 +14,23 @@ function Veterinary() {
 
           <div className="content__inside">
             <p className="text">
-              En cas de problème (<span className="underlined">Et uniquement en cas de problème</span> !) si vous n'arrivez pas à joindre mon maître,
-              vous pouvez m'amener directement chez mon vétérinaire, au <span className="bold">4 bis Rue Saint-Etienne, 74960 Annecy</span> :
+              En cas de problème (
+              <span className="underlined">
+                Et uniquement en cas de problème
+              </span>{" "}
+              !) si vous n'arrivez pas à joindre mon maître, vous pouvez
+              m'amener directement chez mon vétérinaire, au{" "}
+              <span className="bold">
+                4 bis Rue Saint-Etienne, 74960 Annecy
+              </span>{" "}
+              :
             </p>
 
-            <button href="tel:0033450513333" className="btn btn--medium">
-              
-            <BsTelephoneOutbound className="btn__icon"/> 04 50 51 33 33
-            </button>
+            <div className="btn--call">
+              <a href="tel:0033450513333" className="btn btn--medium">
+                <BsTelephoneOutbound className="btn__icon" /> 04 50 51 33 33
+              </a>
+            </div>
 
             <div className="map">
               <iframe
@@ -30,6 +39,7 @@ function Veterinary() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Clinique vétérinaire du Thiou"
+                width="100%"
               ></iframe>
             </div>
 
