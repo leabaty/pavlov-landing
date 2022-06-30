@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import { BsTelephoneOutbound } from "react-icons/bs";
 
-function Human() {
+function Human({ addressDetails }) {
+  console.log(addressDetails.address);
+
   const [mobileNumber, showMobileNumber] = useState(false);
 
   const handleClick = () => {
@@ -30,18 +32,18 @@ function Human() {
               ></iframe>
             </div>
 
-    {/*<p className="text">J'habite au 1 rue des Rainettes, à Annecy-le-Vieux.</p>
+            {/* <p className="text">J'habite au {addressDetails.address}.</p>
 
             <div className="map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.2162696621144!2d6.160246314740342!3d45.90698571181074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9871e3375fb7c0f5!2zNDXCsDU0JzI1LjEiTiA2wrAwOSc0NC44IkU!5e0!3m2!1sfr!2sfr!4v1656141871621!5m2!1sfr!2sfr"
+                src={addressDetails.gmaps-src}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="1 rue des Rainettes Annecy-le-Vieux"
+                title={addressDetails.gmaps-title}
                 width="100%"
               ></iframe>
-            </div>*/}
+            </div> */}
 
             <p className="text">
               Voici le numéro de téléphone de mon maître, au cas où :

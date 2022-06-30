@@ -1,0 +1,53 @@
+{
+  "addresses": [
+    {
+      "id": 1,
+      "name": "Papa",
+      "address": "1 Rue des Rainettes, à Annecy-le-Vieux",
+      "gmaps-src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.2162696621144!2d6.160246314740342!3d45.90698571181074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9871e3375fb7c0f5!2zNDXCsDU0JzI1LjEiTiA2wrAwOSc0NC44IkU!5e0!3m2!1sfr!2sfr!4v1656141871621!5m2!1sfr!2sfr",
+      "gmaps-title": "1 rue des Rainettes Annecy-le-Vieux"
+    },
+    {
+      "id": 2,
+      "name": "Balmettes",
+      "address": "15 Faubourg des Balmettes, à Annecy",
+      "gmaps-src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.759270574365!2d6.12097361473988!3d45.896127512540524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8ffec208b79d%3A0x390e4c79c540227b!2s15%20Fbg%20des%20Balmettes%2C%2074000%20Annecy!5e0!3m2!1sfr!2sfr!4v1649756682296!5m2!1sfr!2sfr",
+      "gmaps-title": "15 Faubourg des Balmettes Annecy"
+    },
+    {
+      "id": 3,
+      "name": "Chalet",
+      "address": "chemin qui longe la Marne, en bordure de Luzancy",
+      "gmaps-src": "",
+      "gmaps-title": ""
+    },
+    {
+      "id": 4,
+      "name": "Maman",
+      "address": "",
+      "gmaps-src": "",
+      "gmaps-title": ""
+    },
+    {
+      "id": 5,
+      "name": "Boulogne",
+      "address": "",
+      "gmaps-src": "",
+      "gmaps-title": ""
+    },
+    {
+      "id": 6,
+      "name": "",
+      "address": "",
+      "gmaps-src": "",
+      "gmaps-title": ""
+    },
+    {
+      "id": 7,
+      "name": "",
+      "address": "",
+      "gmaps-src": "",
+      "gmaps-title": ""
+    }
+  ]
+}

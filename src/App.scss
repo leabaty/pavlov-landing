@@ -186,6 +186,10 @@ table {
   }
 }
 
+.block {
+  margin: 20px;
+}
+
 .btn {
   margin: 15px auto;
   cursor: pointer;
@@ -212,8 +216,9 @@ table {
   }
 
   &--large {
-    padding: 10px 30px;
-    font-size: 1.2rem;
+    width: 250px;
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 
   &--medium {

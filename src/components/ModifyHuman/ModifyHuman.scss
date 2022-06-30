@@ -1,0 +1,14 @@
+input, select {
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: "Poppins", sans-serif;
+}
+
+.form__warning {
+  color: darkred;
+  text-align: center;
+  margin-top: 10px;
+}
