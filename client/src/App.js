@@ -16,6 +16,7 @@ import Human from "./components/Human/Human";
 import ModifyHuman from "./components/ModifyHuman/ModifyHuman";
 import Food from "./components/Food/Food";
 import Veterinary from "./components/Veterinary/Veterinary";
+import VisitorsBook from "./components/VisitorsBook/VisitorsBook";
 
 import Footer from "./components/Footer/Footer";
 
@@ -50,6 +51,17 @@ function App() {
                 <ModifyHuman
                   addresses={addresses.addresses}
                   setAddressDetails={setAddressDetails}
+                />
+              }
+            >
+              {" "}
+            </Route>
+            <Route
+              path="/livre-dor"
+              element={
+                <VisitorsBook
+                  // addresses={addresses.addresses}
+                  // setAddressDetails={setAddressDetails}
                 />
               }
             >

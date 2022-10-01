@@ -32,7 +32,7 @@ function ModifyHuman({addresses, setAddressDetails}) {
     const errors = {};
     if (!value) {
       errors.secretPin = "⚠️ Ce champ est obligatoire";
-    } else if (value != process.env.REACT_APP_SECRET_PIN) {
+    } if (value != process.env.REACT_APP_SECRET_PIN) {
       errors.secretPin = "❌ Le code ne correspond pas";
     }
 
