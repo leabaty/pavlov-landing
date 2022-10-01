@@ -1,10 +1,9 @@
 import mongoose from 'mongoose';
 
-const postSchema = mongoose.Schema({
+const visitorsSchema = mongoose.Schema({
     title: String,
     message: String,
     creator: String,
-    tags: [String],
     selectedFile: String,
     likeCount: {
         type: Number,
@@ -14,8 +13,8 @@ const postSchema = mongoose.Schema({
         type: Date,
         default: new Date(),
     },
-})
+},  { collection: 'VisitorsBook' })
 
-var PostMessage = mongoose.model('PostMessage', postSchema);
+const VisitorsPost = mongoose.model('VisitorsPost', visitorsSchema);
 
-export default PostMessage;
+export default VisitorsPost;
