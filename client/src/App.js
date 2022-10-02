@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.scss";
 
 // UTILS
 import ScrollToTop from "./utils/ScrollToTop";
-
-// DATA
-import addresses from "./data/addresses.json";
 
 // COMPONENTS
 import Navbar from "./components/Navbar/Navbar";
@@ -16,15 +13,13 @@ import Human from "./components/Human/Human";
 import ModifyHuman from "./components/ModifyHuman/ModifyHuman";
 import Food from "./components/Food/Food";
 import Veterinary from "./components/Veterinary/Veterinary";
+import VisitorsBook from "./components/VisitorsBook/VisitorsBook";
 
 import Footer from "./components/Footer/Footer";
 
 // import NotFound from "./components/NotFound/NotFound";
 
 function App() {
-  
-  const [addressDetails, setAddressDetails] = useState([]);
-
   return (
     <div className="app">
       <Router>
@@ -34,27 +29,13 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Landing />}></Route>
-            <Route
-              path="/mon-maitre"
-              element={
-                <Human
-                  addressDetails={addressDetails}
-                />
-              }
-            >
+            <Route path="/mon-maitre" element={<Human />}>
               {" "}
             </Route>
-            <Route
-              path="/changer-mon-adresse"
-              element={
-                <ModifyHuman
-                  addresses={addresses.addresses}
-                  setAddressDetails={setAddressDetails}
-                />
-              }
-            >
+            <Route path="/changer-mon-adresse" element={<ModifyHuman />}>
               {" "}
             </Route>
+            <Route path="/mon-livre-dor" element={<VisitorsBook />}></Route>
             <Route path="/mon-alimentation" element={<Food />}></Route>
             <Route path="/mon-veto" element={<Veterinary />}></Route>
             {/* <Route path="*" element={<NotFound />}></Route> */}

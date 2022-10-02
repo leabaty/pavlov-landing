@@ -1,0 +1,19 @@
+input, select, textarea {
+  width: 90%;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  height: 150px;
+}
+
+.form__warning {
+  color: darkred;
+  text-align: center;
+  margin-top: 10px;
+}

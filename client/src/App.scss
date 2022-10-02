@@ -162,7 +162,7 @@ table {
   }
 
   &__footer {
-    flex: 0 1 40px;
+    flex: 0 1 auto;
   }
 
   /* The above is shorthand for:
@@ -174,7 +174,7 @@ table {
 
 .content {
   padding: 50px 0 0 0;
-  margin: 5vh auto 0;
+  // margin: 5vh auto 0;
   height: 100%;
 
   background-color: var(--white);
@@ -193,7 +193,7 @@ table {
 .btn {
   margin: 15px auto;
   cursor: pointer;
-  border: var(--dark) 1px solid;
+  border:rgb(214, 213, 213) 1px solid;
   border-radius: 15px;
   background-color: var(--beige);
   font-family: "Poppins", sans-serif;
@@ -238,6 +238,14 @@ table {
   margin: 30px 0;
 }
 
+.tag {
+  border-radius: 25px;
+  font-size: small;
+  background-color: rgb(146, 34, 68);
+  color: white;
+  padding: 0 5px;
+  margin: 5px;
+}
 /*fonts*/
 
 a {

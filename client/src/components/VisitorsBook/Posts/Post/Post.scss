@@ -1,0 +1,72 @@
+.post {
+  &__container {
+    width: 80%;
+
+    margin: 20px auto;
+    padding: 20px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(99, 99, 99, 0.2);
+  }
+
+  &__content {
+    width: 95%;
+    margin: auto;
+    text-align: left;
+  }
+
+  &__image {
+    width: 95%;
+    margin: auto;
+    &__file {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__title {
+    margin: 10px 10px;
+    font-weight: 600;
+    font-size: large;
+  }
+
+  &__infos {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+    font-size: small;
+  }
+
+  &__message {
+    margin: 20px 10px;
+  }
+
+  &__actions {
+    margin: 5px 10px;
+    &__btn {
+      background: none;
+      color: inherit;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .post {
+    &__container {
+      display: flex;
+      flex-direction: row;
+    }
+    &__content {
+      width: 50%;
+    }
+
+    &__image {
+      width: 50%;
+    }
+  }
+}
