@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 import { BsTelephoneOutbound } from "react-icons/bs";
 
-function Human({ addressDetails }) {
-  console.log(addressDetails.address);
+function Human() {
 
   const [mobileNumber, showMobileNumber] = useState(false);
 
