@@ -9,7 +9,9 @@ import { createPost, updatePost } from "../../../actions/posts";
 import "./Form.scss";
 
 const VisitorsForm = ({ currentId, setCurrentId }) => {
-  const [authorized, setAuthorized] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [postErrors, setPostErrors] = useState({});
 
   const [postData, setPostData] = useState({
     creator: "",
@@ -38,44 +40,59 @@ const VisitorsForm = ({ currentId, setCurrentId }) => {
     });
   };
 
+  const validateForm = (value) => {
+    const errors = {};
+
+    if (!value.creator) {
+      errors.creator = "⚠ Ce champ est obligatoire";
+    }
+    if (!value.message) {
+      errors.message = "⚠ Ce champ est obligatoire";
+    }
+    return errors;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (currentId === 0) {
-      dispatch(createPost(postData));
-      clear();
-      setAuthorized(true);
-    } else {
-      dispatch(updatePost(currentId, postData));
-      clear();
-      setAuthorized(true);
-    }
+    setPostErrors(validateForm(postData));
+    setIsSubmit(true);
   };
+
+  useEffect(() => {
+    if (Object.keys(postErrors).length === 0 && isSubmit) {
+      if (currentId === 0) {
+        dispatch(createPost(postData));
+        clear();
+        setIsSent(true);
+      } else {
+        dispatch(updatePost(currentId, postData));
+        clear();
+        setIsSent(true);
+      }
+    }
+  }, [postErrors]);
 
   return (
     <>
       {" "}
-      <div className="page app__content">
-          <h1 className="title title--medium">Postez votre message</h1>
+      <div className="content__inside">
+        {!isSent ? (
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="block">
+              <p className="text">Pseudo/Nom</p>
+              <input
+                className="input"
+                name="creator"
+                label="Creator"
+                value={postData.creator}
+                onChange={(e) =>
+                  setPostData({ ...postData, creator: e.target.value })
+                }
+              />
+              <p className="form__warning">{postErrors.creator}</p>
+            </div>
 
-          <div className="content__inside">
-            {!authorized ? (
-              <form className="form" onSubmit={handleSubmit}>
-                <div className="block">
-                  <p className="text">Pseudo/Nom</p>
-                  <input
-                    className="input"
-                    name="creator"
-                    label="Creator"
-                    value={postData.creator}
-                    onChange={(e) =>
-                      setPostData({ ...postData, creator: e.target.value })
-                    }
-                  />
-            
-                </div>
-
-                <div className="block">
+            {/* <div className="block">
                   <p className="text">Titre</p>
                   <input
                     className="input"
@@ -87,57 +104,54 @@ const VisitorsForm = ({ currentId, setCurrentId }) => {
                     }
                   />
                 
-                </div>
+                </div> */}
 
-                <div className="block">
-                  <p className="text"> Votre petit mot </p>
-                  <textarea
-                    className="input"
-                    name="message"
-                    label="Message"
-                    value={postData.message}
-                    // placeholder="..."
-                    onChange={(e) =>
-                      setPostData({ ...postData, message: e.target.value })
-                    }
-                  />
-        
-                </div>
+            <div className="block">
+              <p className="text"> Votre petit mot </p>
+              <textarea
+                className="input"
+                name="message"
+                label="Message"
+                value={postData.message}
+                // placeholder="..."
+                onChange={(e) =>
+                  setPostData({ ...postData, message: e.target.value })
+                }
+              />
+              <p className="form__warning">{postErrors.message}</p>
+            </div>
 
-                <div className="block">
-                  <FileBase
-                    type="file"
-                    multiple={false}
-                    onDone={({ base64 }) =>
-                      setPostData({ ...postData, selectedFile: base64 })
-                    }
-                  />
-                </div>
+            <div className="block">
+              <FileBase
+                type="file"
+                multiple={false}
+                onDone={({ base64 }) =>
+                  setPostData({ ...postData, selectedFile: base64 })
+                }
+              />
+            </div>
 
-                <button className="btn btn--large" type="submit">
-                  Poster mon mot doux 🐱
-                </button>
+            <button className="btn btn--large" type="submit">
+              Poster mon mot doux 🐱
+            </button>
 
-                <button className="btn btn--large" onClick={clear}>
+            {/* <button className="btn btn--large" onClick={clear}>
                   Effacer
-                </button>
-              </form>
-            ) : (
-              <div>
-                <p className="text">
-                  Merci pour ce joli commentaire ! <br />
-                  L'amicale des amoureux de Pavlov vous souhaitent une bonne
-                  journée !
-                </p>
+                </button> */}
 
-                <Link to="/">
-                  <button className="btn btn--large">Retour à l'accueil</button>
-                </Link>
-              </div>
+            {Object.keys(postErrors).length !== 0 ? (
+              <p className="text">⚠️ Les champs nom/pseudo et commentaire sont obligatoires.</p>
+            ) : (
+              ""
             )}
-          </div>
-        </div>
-     
+          </form>
+        ) : (
+          <p className="text">
+            Merci pour ce joli commentaire ! <br />
+            L'amicale des amoureux de Pavlov vous souhaitent une bonne journée !
+          </p>
+        )}
+      </div>
     </>
   );
 };

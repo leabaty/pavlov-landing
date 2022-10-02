@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Landing.scss";
 
+import { IoBookSharp } from "react-icons/io5";
 import { BiHomeHeart } from "react-icons/bi";
 import { GiDogBowl } from "react-icons/gi";
 import { MdOutlineHealthAndSafety } from "react-icons/md";
@@ -47,6 +48,14 @@ function Landing() {
                 <Link to="/mon-veto">
                   <MdOutlineHealthAndSafety className="landing__card__icon" />
                   <h2 className="title--nano">Mon véto</h2>
+                </Link>
+              </div>
+
+              <div className="landing__card">
+                <Link to="/mon-livre-dor">
+                  <IoBookSharp className="landing__card__icon" />
+                  <h2 className="title--nano">Mon livre d'Or</h2>
+                  <div className="tag">Nouveau !</div>
                 </Link>
               </div>
             </div>
