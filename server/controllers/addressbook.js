@@ -47,11 +47,11 @@ export const updateAddress = async (req, res) => {
     
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No address with id: ${id}`);
 
-    const updatedPost = { name, address, gmapssrc, gmapstitle, _id: id };
+    const updatedAddress = { name, address, gmapssrc, gmapstitle, _id: id };
 
-    await AddressPost.findByIdAndUpdate(id, updatedPost, { new: true });
+    await AddressPost.findByIdAndUpdate(id, updatedAddress, { new: true });
 
-    res.json(updatedPost);
+    res.json(updatedAddress);
 }
 
 export const deleteAddress = async (req, res) => {
