@@ -19,7 +19,7 @@ function Human() {
 
           <div className="content__inside">
     
-           {/*  <p className="text">
+            <p className="text">
               J'habite au 1 rue des Rainettes, à Annecy-le-Vieux.
             </p>
 
@@ -32,9 +32,9 @@ function Human() {
                 title="1 rue des Rainettes Annecy-le-Vieux"
                 width="100%"
               ></iframe>
-            </div>*/}
+            </div>
 
-            <p className="text">J'habite au 15 Faubourg des Balmettes.</p>
+            {/* <p className="text">J'habite au 15 Faubourg des Balmettes.</p>
 
             <div className="map">
               <iframe
@@ -45,7 +45,7 @@ function Human() {
                 title="15 faubourg des balmettes Annecy"
                 width="100%"
               ></iframe>
-            </div>
+            </div>*/}
 
             {/* <p className="text">J'habite au {addressDetails.address}.</p>
 
