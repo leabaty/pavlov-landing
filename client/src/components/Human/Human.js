@@ -45,7 +45,7 @@ function Human() {
                 title="15 faubourg des balmettes Annecy"
                 width="100%"
               ></iframe>
-            </div>*/}
+            </div>
 
             {/* <p className="text">J'habite au {addressDetails.address}.</p>
 
@@ -79,7 +79,7 @@ function Human() {
                   Cliquez pour révéler
                 </button>
               </div>
-            )}
+            )}*/}
 
             <p className="text">
               Merci de ne pas m'enfermer la nuit chez vous, même si je semble
